@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/main.css">
-    <title>Document</title>
+    <title>Live News</title>
 </head>
 
        
 <body onload="getLiveNews()">
-    <h1>Welcome Here</h1>
+    <h1>Live News</h1>
 
     <div class="card shadow1" style="display: none;">
         <h2>Shadow with 2 properties</h2>
@@ -56,6 +56,8 @@
                 //Creaing Iframe
                 var iframe = document.createElement('iframe');
                 iframe.className = "myIframe";
+                iframe.setAttribute('allowFullScreen', '')
+                iframe.ariaRoleDescription= "rameborder=0\"allowfullscreen"
                 iframe.src=embaddedUrl;
                 temp.appendChild(iframe);
                 document.getElementsByTagName('body')[0].appendChild(temp);
