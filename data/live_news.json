@@ -1,0 +1,44 @@
+{
+    "appVersion": "1.0.0",
+    "live_channel": [
+      {
+        "title": "Somoy TV",
+        "category":"tv",
+        "sourceType":"youtube",
+        "youtube_id":"coyXJ0Zs5x0",
+        "country":"Bangladesh",
+        "language":"Bangla",
+        "show":true
+      },
+      {
+        "title": "Jamuna TV",
+        "category":"tv",
+        "sourceType":"youtube",
+        "youtube_id":"HO71acs9YLs",
+        "country":"Bangladesh",
+        "language":"Bangla",
+        "show":true
+      },
+      {
+        "title": "Somoy TV",
+        "category":"tv",
+        "sourceType":"youtube",
+        "youtube_id":"coyXJ0Zs5x0",
+        "country":"Bangladesh",
+        "language":"Bangla",
+        "show":true
+      }
+      
+    ],
+    "news_papers":[
+      {
+        "name" : "Prothom Alo",
+        "home_page" : "http"
+      },
+       {
+        "name" : "Prothom Alo",
+        "home_page" : "http"
+      }
+      ]
+  
+  }

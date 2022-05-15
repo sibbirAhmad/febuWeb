@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Welcome Here</h1>
-    
+
+    <div class="card shadow1">
+        <h2>Shadow with 2 properties</h2>
+        <pre>box-shadow:
+        0 5px 10px rgba(154,160,185,0.05),
+        0 15px 40px rgba(166,173,201,0.2);</pre>
+    </div>
+    <div class="player">
+        <iframe width="480" height="320" src="https://www.youtube.com/embed/coyXJ0Zs5x0" frameborder="0" gesture="media"
+            allow="encrypted-media" allowfullscreen></iframe>
+    </div>
+
+
+
+    <button onclick="mAlert()">Parse</button>
+    <p id="p"></p>
+
+
+
+
+    <script>
+        function mAlert() {
+            fetch("data/live_news.json")
+                .then(response => {
+                    return response.json();
+                })
+                .then(jsondata => analyzeJson(jsondata));
+
+        }
+        function analyzeJson(data) {
+            var d = data.live_channel;
+            console.log(d);
+            var x = "";
+            for (let i in d) {
+                x += d[i].title;
+            }
+
+            document.getElementById("p").innerHTML = x;
+        }
+
+        //Pasing json
+
+
+    </script>
 </body>
+
 </html>
