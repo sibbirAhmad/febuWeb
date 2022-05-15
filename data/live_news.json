@@ -20,12 +20,21 @@
         "show":true
       },
       {
-        "title": "Somoy TV",
+        "title": "Channel 24",
         "category":"tv",
         "sourceType":"youtube",
-        "youtube_id":"coyXJ0Zs5x0",
+        "youtube_id":"2wMdINhc",
         "country":"Bangladesh",
         "language":"Bangla",
+        "show":true
+      },
+      {
+        "title": "Al Jazeera English",
+        "category":"tv",
+        "sourceType":"youtube",
+        "youtube_id":"POY4Q0QSI",
+        "country":"International",
+        "language":"English",
         "show":true
       }
       
