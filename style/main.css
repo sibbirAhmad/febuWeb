@@ -1,6 +1,7 @@
 *{
     align-content: center;
     text-align: center;
+    margin: 5px auto;
 }
 body {
     background: #fafafa;
@@ -44,6 +45,7 @@ body {
       .myIframe{
         height: 320px;
         width: 480px;
+       
       }
       .responsive-iframe {
         position: absolute;
