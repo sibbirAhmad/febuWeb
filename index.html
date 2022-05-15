@@ -9,30 +9,30 @@
     <title>Document</title>
 </head>
 
-<body>
+       
+<body onload="getLiveNews()">
     <h1>Welcome Here</h1>
 
-    <div class="card shadow1">
+    <div class="card shadow1" style="display: none;">
         <h2>Shadow with 2 properties</h2>
         <pre>box-shadow:
         0 5px 10px rgba(154,160,185,0.05),
         0 15px 40px rgba(166,173,201,0.2);</pre>
     </div>
-    <div class="player">
-        <iframe width="480" height="320" src="https://www.youtube.com/embed/coyXJ0Zs5x0" frameborder="0" gesture="media"
+    <div class="player" style="display: none;">
+        <iframe class="myIframe" src="https://www.youtube.com/embed/coyXJ0Zs5x0" frameborder="0" gesture="media"
             allow="encrypted-media" allowfullscreen></iframe>
     </div>
 
 
 
-    <button onclick="mAlert()">Parse</button>
-    <p id="p"></p>
+   
 
 
 
 
     <script>
-        function mAlert() {
+        function getLiveNews() {
             fetch("data/live_news.json")
                 .then(response => {
                     return response.json();
@@ -43,12 +43,23 @@
         function analyzeJson(data) {
             var d = data.live_channel;
             console.log(d);
-            var x = "";
-            for (let i in d) {
-                x += d[i].title;
-            }
 
-            document.getElementById("p").innerHTML = x;
+            var temp;
+            var x = "";
+            var embadded = "https://www.youtube.com/embed/";
+            for (let i in d) {
+                x += d[i].youtube_id;
+                var embaddedUrl = embadded+d[i].youtube_id;
+                //Creating Dynamic View
+                temp = document.createElement('div');
+                temp.className = "player";
+                //Creaing Iframe
+                var iframe = document.createElement('iframe');
+                iframe.className = "myIframe";
+                iframe.src=embaddedUrl;
+                temp.appendChild(iframe);
+                document.getElementsByTagName('body')[0].appendChild(temp);
+            }
         }
 
         //Pasing json
